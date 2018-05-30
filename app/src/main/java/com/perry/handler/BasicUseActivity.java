@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.os.MessageQueue;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -170,6 +171,7 @@ public class BasicUseActivity extends AppCompatActivity {
     }
 
     public void sendMessageDelayed(View view) {
+        Log.e("tag", " ------>>> " + "sendMessageDelayed " + System.currentTimeMillis());
         Handler handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
@@ -177,6 +179,7 @@ public class BasicUseActivity extends AppCompatActivity {
                 switch (msg.what) {
                     case 0:
                         makeToast("sendMessageDelayed" + " 参数 = " + msg.obj + getThreadName());
+                        Log.e("tag", " ------>>> " + "sendMessageDelayed " + System.currentTimeMillis());
                         break;
                 }
             }
@@ -212,5 +215,25 @@ public class BasicUseActivity extends AppCompatActivity {
             }
         };
         handler.sendMessageAtFrontOfQueue(Message.obtain(handler, 0, "obj参数"));
+    }
+
+    public void idleHandler(View view) {
+        Log.e("tag", " ------>>> " + "点击idleHandler按钮 " + getThreadName());
+        Looper.myQueue().addIdleHandler(
+                new MessageQueue.IdleHandler() {
+                    @Override
+                    public boolean queueIdle() {
+                        Log.e("tag", " ------>>> " + "执行非主线程runnable " + getThreadName());
+                        try {
+                            Thread.sleep(2000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        makeToast("IdleHandler " + getThreadName());
+                        Log.e("tag", " ------>>> " + "idleHandler " + System.currentTimeMillis());
+                        return false;
+                    }
+                }
+        );
     }
 }

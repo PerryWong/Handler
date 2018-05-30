@@ -10,8 +10,9 @@
     <string name="sendMessageAtTime">sendMessageAtTime(Message msg, long delayMillis)\n延迟 2 秒</string>
     <string name="sendMessageAtFrontOfQueue">sendMessageAtFrontOfQueue(Message msg)</string>
     <string name="postBackgroundThread">post(Runnable r) on background thread</string>
-    <string name="button10">no crash: post(Runnable r) on background thread</string>
-    <string name="button11">MessageQueue.IdleHandler</string>
+    <string name="postNoCrash">no crash: post(Runnable r) on background thread</string>
+    <string name="handleThread">no crash: post(Runnable r) on background HandleThread</string>
+    <string name="idleHandler">MessageQueue.IdleHandler</string>
     <string name="button12">handler.removeCallbacks(runnable)</string>
     <string name="button13">HandlerThread.quit()</string>
 </resources>

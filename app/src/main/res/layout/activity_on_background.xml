@@ -4,12 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.perry.handler.OnBackgroundActivity"
-    android:orientation="vertical">
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/postBackgroundThread"
-    android:textAllCaps="false"
-    android:onClick="postBackgroundThread"/>
+    android:orientation="vertical"
+    tools:context="com.perry.handler.OnBackgroundActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="postBackgroundThread"
+        android:text="@string/postBackgroundThread"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="postNoCrash"
+        android:text="@string/postNoCrash"
+        android:textAllCaps="false" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="handleThread"
+        android:text="@string/handleThread"
+        android:textAllCaps="false" />
 </LinearLayout>
