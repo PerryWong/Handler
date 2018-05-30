@@ -11,53 +11,62 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="post"
-        android:text="@string/postUIThread" />
+        android:text="@string/postUIThread"
+        android:textAllCaps="false" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="postDelayed"
-        android:text="@string/postDelayed" />
+        android:text="@string/postDelayed"
+        android:textAllCaps="false" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="postAtTime"
-        android:text="@string/postAtTime" />
+        android:text="@string/postAtTime"
+        android:textAllCaps="false" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="postAtFrontOfQueue"
-        android:text="@string/postAtFrontOfQueue" />
+        android:text="@string/postAtFrontOfQueue"
+        android:textAllCaps="false" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="sendMessage"
-        android:text="@string/sendMessage" />
+        android:text="@string/sendMessage"
+        android:textAllCaps="false" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="sendEmptyMessage"
-        android:text="@string/sendEmptyMessage" />
+        android:text="@string/sendEmptyMessage"
+        android:textAllCaps="false" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="sendMessageDelayed"
-        android:text="@string/sendMessageDelayed" />
+        android:text="@string/sendMessageDelayed"
+        android:textAllCaps="false" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="sendMessageAtTime"
-        android:text="@string/sendMessageAtTime" />
+        android:text="@string/sendMessageAtTime"
+        android:textAllCaps="false" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="sendMessageAtFrontOfQueue"
-        android:text="@string/sendMessageAtFrontOfQueue" />
+        android:text="@string/sendMessageAtFrontOfQueue"
+        android:textAllCaps="false" />
 </LinearLayout>

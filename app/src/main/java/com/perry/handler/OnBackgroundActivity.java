@@ -1,23 +1,18 @@
 package com.perry.handler;
 
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class OnBackgroundActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_on_background);
     }
 
-    public void basic(View view) {
-        BasicUseActivity.start(this);
-    }
-
-    public void onBackground(View view) {
+    public void postBackgroundThread(View view) {
 
     }
 }

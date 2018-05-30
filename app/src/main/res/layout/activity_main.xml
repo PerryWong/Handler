@@ -4,12 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.perry.handler.MainActivity">
+    tools:context="com.perry.handler.MainActivity"
+    android:orientation="vertical">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="basic"
-        android:onClick="basic"/>
+        android:onClick="basic"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="onBackground"
+        android:onClick="onBackground"
+        android:textAllCaps="false" />
 
 </LinearLayout>

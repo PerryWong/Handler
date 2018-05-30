@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,8 +14,8 @@ import android.widget.Toast;
 
 public class BasicUseActivity extends AppCompatActivity {
 
-    public static final int ONE_SECOND = 1000;
-    public static final int TWO_SECOND = 2000;
+    public static final long ONE_SECOND = 1000;
+    public static final long TWO_SECOND = 2000;
 
     public static void start(Activity activity) {
         activity.startActivity(new Intent(activity, BasicUseActivity.class));
@@ -99,13 +100,15 @@ public class BasicUseActivity extends AppCompatActivity {
 
     public void postAtTime(View view) {
         Handler handler = new Handler();
+//        long atTime = System.currentTimeMillis() + TWO_SECOND;
+        long atTime = SystemClock.uptimeMillis() + TWO_SECOND;
         handler.postAtTime(
                 new Runnable() {
                     @Override
                     public void run() {
                         makeToast("postAtTime " + getThreadName());
                     }
-                }, System.currentTimeMillis() + TWO_SECOND
+                }, atTime
         );
     }
 
@@ -193,7 +196,7 @@ public class BasicUseActivity extends AppCompatActivity {
                 }
             }
         };
-        handler.sendMessageAtTime(Message.obtain(handler, 0, "obj参数"), System.currentTimeMillis() + TWO_SECOND);
+        handler.sendMessageAtTime(Message.obtain(handler, 0, "obj参数"), SystemClock.uptimeMillis() + TWO_SECOND);
     }
 
     public void sendMessageAtFrontOfQueue(View view) {
