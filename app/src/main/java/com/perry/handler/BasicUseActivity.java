@@ -155,6 +155,34 @@ public class BasicUseActivity extends AppCompatActivity {
         thread.start();
     }
 
+    public void sendMessageCallback(View view) {
+        Log.e("tag", " ------>>> " + "点击sendMessageCallback按钮 ");
+        final Handler handler = new Handler() {
+            // 此处处理msg需要覆写该方法
+            @Override
+            public void handleMessage(Message msg) {
+                super.handleMessage(msg);
+                // handleMessage 执行方法体
+                makeToast("sendMessage  handleMessage");
+            }
+        };
+        // 发送一个Message
+        handler.sendMessage(
+                // 创建含有Runnable callback的msg
+                Message.obtain(
+                        handler,
+                        new Runnable() {
+                            @Override
+                            public void run() {
+                                // callback 执行方法体
+                                makeToast("sendMessage  Runnable");
+                            }
+                        }
+
+                )
+        );
+    }
+
     public void sendEmptyMessage(View view) {
         Handler handler = new Handler() {
             @Override
@@ -171,20 +199,26 @@ public class BasicUseActivity extends AppCompatActivity {
     }
 
     public void sendMessageDelayed(View view) {
-        Log.e("tag", " ------>>> " + "sendMessageDelayed " + System.currentTimeMillis());
+        Log.e("tag", " ------>>> " + "点击sendMessageDelayed " + System.currentTimeMillis());
         Handler handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
-                switch (msg.what) {
-                    case 0:
-                        makeToast("sendMessageDelayed" + " 参数 = " + msg.obj + getThreadName());
-                        Log.e("tag", " ------>>> " + "sendMessageDelayed " + System.currentTimeMillis());
-                        break;
-                }
+                // 此处因为发送了runnable,则不会执行handleMessage(Message msg)方法体
+                makeToast("sendMessageDelayed" + " 参数 = " + msg.obj + getThreadName());
+                Log.e("tag", " ------>>> " + "sendMessageDelayed handleMessage " + System.currentTimeMillis());
             }
         };
-        handler.sendMessageDelayed(Message.obtain(handler, 0, "obj参数"), ONE_SECOND);
+        handler.sendMessageDelayed(
+                Message.obtain(
+                        handler,
+                        new Runnable() {
+                            @Override
+                            public void run() {
+                                makeToast("sendMessageDelayed runnable " + "  Message.obtain(handler, runnable)" + getThreadName());
+                            }
+                        }
+                ), ONE_SECOND);
     }
 
     public void sendMessageAtTime(View view) {
@@ -236,4 +270,5 @@ public class BasicUseActivity extends AppCompatActivity {
                 }
         );
     }
+
 }

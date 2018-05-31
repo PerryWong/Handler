@@ -20,4 +20,8 @@ public class MainActivity extends AppCompatActivity {
     public void onBackground(View view) {
         OnBackgroundActivity.start(this);
     }
+
+    public void removeCallbacks(View view) {
+        RemoveCallbacksActivity.start(this);
+    }
 }
