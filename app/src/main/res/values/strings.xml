@@ -5,6 +5,7 @@
     <string name="postAtTime">postAtTime(Runnable r, long uptimeMillis)\n延迟 2 秒</string>
     <string name="postAtFrontOfQueue">postAtFrontOfQueue(Runnable r)</string>
     <string name="sendMessage">sendMessage(Message msg)</string>
+    <string name="sendMessageCallback">sendMessage(Message.obtain(Handler target, Runnable callback))</string>
     <string name="sendEmptyMessage">sendEmptyMessage(int what)</string>
     <string name="sendMessageDelayed">sendMessageDelayed(Message msg, long delayMillis)\n延迟 1 秒</string>
     <string name="sendMessageAtTime">sendMessageAtTime(Message msg, long delayMillis)\n延迟 2 秒</string>
@@ -13,6 +14,11 @@
     <string name="postNoCrash">no crash: post(Runnable r) on background thread</string>
     <string name="handleThread">no crash: post(Runnable r) on background HandleThread</string>
     <string name="idleHandler">MessageQueue.IdleHandler</string>
-    <string name="button12">handler.removeCallbacks(runnable)</string>
-    <string name="button13">HandlerThread.quit()</string>
+    <string name="removeCallbacks">removeCallbacks(Runnable r)</string>
+    <string name="removeCallbacksToken">removeCallbacks(Runnable r, Object token)</string>
+    <string name="removeMessagesWhat">removeMessages(int what)</string>
+    <string name="removeMessagesWhatToken">removeMessages(int what ,Object token)</string>
+    <string name="removeCallbacksAndMessages">removeCallbacksAndMessages(Object token)</string>
+    <string name="handlerThreadQuit">HandlerThread.quit()</string>
+    <string name="handlerThreadQuitSafely">HandlerThread.quitSafely()</string>
 </resources>

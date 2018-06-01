@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.perry.handler.RemoveCallbacksActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="removeCallbacks"
+        android:text="@string/removeCallbacks"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="removeCallbacksToken"
+        android:text="@string/removeCallbacksToken"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="removeMessagesWhat"
+        android:text="@string/removeMessagesWhat"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="removeMessagesWhatToken"
+        android:text="@string/removeMessagesWhatToken"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="removeCallbacksAndMessages"
+        android:text="@string/removeCallbacksAndMessages"
+        android:textAllCaps="false" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="handlerThreadQuit"
+        android:text="@string/handlerThreadQuit"
+        android:textAllCaps="false" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="handlerThreadQuitSafely"
+        android:text="@string/handlerThreadQuitSafely"
+        android:textAllCaps="false" />
+</LinearLayout>

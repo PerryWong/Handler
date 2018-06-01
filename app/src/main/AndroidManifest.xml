@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".BasicUseActivity" />
-        <activity android:name=".OnBackgroundActivity"></activity>
+        <activity android:name=".OnBackgroundActivity" />
+        <activity android:name=".RemoveCallbacksActivity" />
+        <activity android:name=".CustomHandlerActivity"></activity>
     </application>
 
 </manifest>

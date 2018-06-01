@@ -20,5 +20,11 @@
         android:text="onBackground"
         android:onClick="onBackground"
         android:textAllCaps="false" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="removeCallbacks"
+        android:onClick="removeCallbacks"
+        android:textAllCaps="false" />
 
 </LinearLayout>

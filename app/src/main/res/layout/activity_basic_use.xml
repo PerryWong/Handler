@@ -45,6 +45,13 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="sendMessageCallback"
+        android:text="@string/sendMessageCallback"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="sendEmptyMessage"
         android:text="@string/sendEmptyMessage"
         android:textAllCaps="false" />

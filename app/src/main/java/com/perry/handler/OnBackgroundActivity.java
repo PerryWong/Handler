@@ -113,6 +113,8 @@ public class OnBackgroundActivity extends AppCompatActivity {
                                     @Override
                                     public void run() {
                                         makeToast("postNoCrash " + getThreadName());
+                                        // 使用后需要退出looper避免线程阻塞
+                                        Looper.myLooper().quit();
                                     }
                                 }
                         );
