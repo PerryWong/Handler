@@ -3,7 +3,7 @@ package com.perry.handler;
 /**
  * Author: Pengyu Wang
  * Creation Date: 2018/5/31 11:56
- * Desc:
+ * Desc: token信息载体
  */
 
 public class TokenBean {
